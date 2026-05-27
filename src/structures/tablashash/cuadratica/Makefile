@@ -1,0 +1,10 @@
+cflags = -Wall -std=c99 -O2 -c
+dflags = -Wall -std=c99 -g
+source = $(wildcard *.c)
+source_o = $(wildcard *.o)
+output = ../../../../lib/libHashQ.a
+
+build :
+	gcc $(cflags) $(source) 
+	ar rcs $(output) $(source_o)
+	@echo "Compilo Exitosamente!!!"
